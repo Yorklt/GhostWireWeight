@@ -43,7 +43,8 @@ class GhostWireWeight_OT_ModeController(bpy.types.Operator):
     bl_idname = "ghostwireweight.modecontroller"
     bl_label = "Ghost Wire Weight"
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         print_log("ModeController.init is called", 1)
 
     def __del__(self):
